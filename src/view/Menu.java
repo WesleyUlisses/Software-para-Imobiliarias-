@@ -111,6 +111,11 @@ public class Menu extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu3.setText("Alugueis");
+        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu3ActionPerformed(evt);
+            }
+        });
 
         jMenuItem9.setText("Apartamentos");
         jMenu3.add(jMenuItem9);
@@ -125,6 +130,11 @@ public class Menu extends javax.swing.JFrame {
         jMenu3.add(jMenuItem12);
 
         jMenuItem13.setText("Todos");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem13);
 
         jMenuBar1.add(jMenu3);
@@ -171,7 +181,7 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         TelaCadastroSala tela = new TelaCadastroSala();
-        tela.setSize(800,400);
+        tela.setSize(800,600);
         tela.setVisible(true);
         jDesktopPane1.setVisible(true);
         jDesktopPane1.add(tela);
@@ -181,7 +191,7 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         TelaCadastroCasa tela = new TelaCadastroCasa();
-        tela.setSize(800,400);
+        tela.setSize(800,600);
         tela.setVisible(true);
         jDesktopPane1.setVisible(true);
         jDesktopPane1.add(tela);
@@ -191,7 +201,7 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         TelaCadastroApartamento tela = new TelaCadastroApartamento();
-        tela.setSize(800,400);
+        tela.setSize(800,600);
         tela.setVisible(true);
         jDesktopPane1.setVisible(true);
         jDesktopPane1.add(tela);
@@ -201,11 +211,31 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         TelaCadastroTerreno tela = new TelaCadastroTerreno();
-        tela.setSize(800,400);
+        tela.setSize(800,600);
         tela.setVisible(true);
         jDesktopPane1.setVisible(true);
         jDesktopPane1.add(tela);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+        // TODO add your handling code here:
+        
+        TelaResultados tela = new TelaResultados();
+        tela.setSize(800,600);
+        tela.setVisible(true);
+        jDesktopPane1.setVisible(true);
+        jDesktopPane1.add(tela);
+    }//GEN-LAST:event_jMenu3ActionPerformed
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        // TODO add your handling code here:
+        TelaResultados tela = new TelaResultados();
+        tela.setSize(800,600);
+        tela.setVisible(true);
+        jDesktopPane1.setVisible(true);
+        jDesktopPane1.add(tela);
+        
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     /**
      * @param args the command line arguments

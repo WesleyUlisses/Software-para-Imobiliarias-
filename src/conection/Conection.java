@@ -22,7 +22,6 @@ public class Conection {
             String usuario = "root";
             String senha ="2002";
             conn =  DriverManager.getConnection(url, usuario, senha);
-            JOptionPane.showMessageDialog(null,"conectado ao banco");
         } catch (SQLException erro) {
             //Erro conexao
             

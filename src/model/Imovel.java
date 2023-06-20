@@ -337,4 +337,32 @@ public class Imovel {
         this.disponivel = disponivel;
     }
     
+    
+    @Override
+public String toString() {
+    return "ID Imóvel: " + id_imovel +
+            "\nStatus: " + status +
+            "\nTipo de Imóvel: " + tipo_imovel +
+            "\nDescrição: " + descricao +
+            "\nEndereço: " + endereco +
+            "\nFotos: " + fotos +
+            "\nProprietário ID: " + proprietario_idproprietario +
+            "\nNúmero de Vagas na Garagem: " + n_vagas_garagem +
+            "\nQuantidade de Salas de Jantar: " + qtd_sala_jantar +
+            "\nQuantidade de Salas: " + qtd_salas +
+            "\nQuantidade de Suítes: " + qtd_suites +
+            "\nQuantidade de Quartos: " + qtd_quartos +
+            "\nAndar: " + andar +
+            "\nÁrea: " + area +
+            "\nValor: " + valor +
+            "\nValor da Imobiliária: " + valor_imobiliaria +
+            "\nValor do Condomínio: " + valor_con +
+            "\nLargura: " + largura +
+            "\nComprimento: " + comprimento +
+            "\nArmário: " + armario +
+            "\nPortaria: " + portaria +
+            "\nAclive/Declive: " + aclive_declive +
+            "\nDisponível: " + disponivel;
+}
+
 }

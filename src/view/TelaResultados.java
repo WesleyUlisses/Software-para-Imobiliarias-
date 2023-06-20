@@ -4,6 +4,12 @@
  */
 package view;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+import model.Imovel;
+import model.dao.ImovelDao;
+
 /**
  *
  * @author SAMSUNG
@@ -34,6 +40,11 @@ public class TelaResultados extends javax.swing.JInternalFrame {
         setClosable(true);
 
         jButton1.setText("Busca");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -59,7 +70,15 @@ public class TelaResultados extends javax.swing.JInternalFrame {
             new String [] {
                 "Endereço", "Proprietario", "Valor", "Status", "Área"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Float.class, java.lang.String.class, java.lang.Float.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -92,6 +111,32 @@ public class TelaResultados extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        String busca = jTextField1.getText();
+        
+        ImovelDao imovel = new ImovelDao();
+        List<Imovel> lista = new ArrayList<>();
+        lista = imovel.ConsultarPorBairro(busca);
+        
+        for(int i = 0; i < lista.size(); i++){
+            /*
+            jTable1.setValueAt(lista.get(i).getNome(), i, 0);
+            jTable1.setValueAt(lista.get(i).getMatricula(), i, 1);
+            jTable1.setValueAt(lista.get(i).getOcupacao(), i, 2);
+            jTable1.setValueAt(lista.get(i).getCota().getImpressoes(), i, 3);
+            */
+            jTable1.setValueAt(lista.get(i).getEndereco(),i,0);
+            jTable1.setValueAt(lista.get(i).getProprietario_idproprietario(),i,1);
+            jTable1.setValueAt(lista.get(i).getValor(),i,2);
+            jTable1.setValueAt(lista.get(i).getStatus(),i,3);
+            jTable1.setValueAt(lista.get(i).getArea(),i,4);
+
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
