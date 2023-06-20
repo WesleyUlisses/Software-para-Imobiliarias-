@@ -4,6 +4,9 @@
  */
 package view;
 
+import model.Imovel;
+import model.dao.ImovelDao;
+
 /**
  *
  * @author SAMSUNG
@@ -117,6 +120,11 @@ public class TelaCadastroApartamento extends javax.swing.JInternalFrame {
         jLabel16.setText("Andar:");
 
         jButton1.setText("Cadastrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel17.setText("Disponivel:");
 
@@ -303,6 +311,40 @@ public class TelaCadastroApartamento extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        Imovel place = new Imovel();
+        
+        place.setEndereco(jTextField1.getText());
+        place.setDescricao(jTextField2.getText());
+        place.setArea(Float.parseFloat(jTextField3.getText()));
+        place.setValor(Float.parseFloat(jTextField4.getText()));
+        place.setValor_imobiliaria(Float.parseFloat(jTextField5.getText()));
+        place.setQtd_quartos(Integer.parseInt(jTextField9.getText()));
+        place.setQtd_sala_jantar(Integer.parseInt(jTextField12.getText()));
+        place.setQtd_suites(Integer.parseInt(jTextField10.getText()));
+        place.setQtd_salas(Integer.parseInt(jTextField11.getText()));
+        place.setProprietario_idproprietario(Integer.parseInt(jTextField14.getText()));
+        place.setN_vagas_garagem(Integer.parseInt(jTextField8.getText()));
+        place.setStatus(jComboBox1.getItemAt(jComboBox1.getSelectedIndex()));
+        
+        if(jComboBox2.getSelectedIndex() == 0)
+            place.setArmario(true);
+        else
+            place.setArmario(false);
+        
+        
+        if(jComboBox3.getSelectedIndex() == 0)
+            place.setDisponivel(true);
+        else
+            place.setDisponivel(false);
+        
+        
+        ImovelDao imovel = new ImovelDao();
+        imovel.Cadastrar(place);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

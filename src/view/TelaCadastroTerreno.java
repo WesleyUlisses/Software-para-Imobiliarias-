@@ -4,6 +4,9 @@
  */
 package view;
 
+import model.Imovel;
+import model.dao.ImovelDao;
+
 /**
  *
  * @author SAMSUNG
@@ -93,6 +96,11 @@ public class TelaCadastroTerreno extends javax.swing.JInternalFrame {
         jLabel10.setText("Aclieve/Declive");
 
         jButton1.setText("Cadastrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel11.setText("Dsiponivel:");
 
@@ -240,6 +248,36 @@ public class TelaCadastroTerreno extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        Imovel place = new Imovel();
+        
+        place.setEndereco(jTextField1.getText());
+        place.setDescricao(jTextField2.getText());
+        place.setArea(Float.parseFloat(jTextField3.getText()));
+        place.setValor(Float.parseFloat(jTextField4.getText()));
+        place.setValor_imobiliaria(Float.parseFloat(jTextField5.getText()));
+        place.setProprietario_idproprietario(Integer.parseInt(jTextField8.getText()));
+        place.setStatus(jComboBox1.getItemAt(jComboBox1.getSelectedIndex()));
+        place.setLargura(Float.parseFloat(jTextField6.getText()));
+        place.setComprimento(Float.parseFloat(jTextField7.getText()));
+        if(jComboBox2.getSelectedIndex() == 0)
+            place.setAclive_declive(true);
+        else
+            place.setAclive_declive(false);
+        
+        if(jComboBox3.getSelectedIndex() == 0)
+            place.setDisponivel(true);
+        else
+            place.setDisponivel(false);
+        
+        
+        ImovelDao imovel = new ImovelDao();
+        imovel.Cadastrar(place);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

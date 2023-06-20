@@ -128,8 +128,10 @@ public class TelaResultados extends javax.swing.JInternalFrame {
             jTable1.setValueAt(lista.get(i).getOcupacao(), i, 2);
             jTable1.setValueAt(lista.get(i).getCota().getImpressoes(), i, 3);
             */
+            
+            
             jTable1.setValueAt(lista.get(i).getEndereco(),i,0);
-            jTable1.setValueAt(lista.get(i).getProprietario_idproprietario(),i,1);
+            jTable1.setValueAt(imovel.buscarProprietario(lista.get(i).getProprietario_idproprietario()),i,1);
             jTable1.setValueAt(lista.get(i).getValor(),i,2);
             jTable1.setValueAt(lista.get(i).getStatus(),i,3);
             jTable1.setValueAt(lista.get(i).getArea(),i,4);

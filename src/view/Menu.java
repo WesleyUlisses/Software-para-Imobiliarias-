@@ -181,7 +181,6 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         TelaCadastroSala tela = new TelaCadastroSala();
-        tela.setSize(800,600);
         tela.setVisible(true);
         jDesktopPane1.setVisible(true);
         jDesktopPane1.add(tela);
@@ -191,7 +190,6 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         TelaCadastroCasa tela = new TelaCadastroCasa();
-        tela.setSize(800,600);
         tela.setVisible(true);
         jDesktopPane1.setVisible(true);
         jDesktopPane1.add(tela);
@@ -201,7 +199,6 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         TelaCadastroApartamento tela = new TelaCadastroApartamento();
-        tela.setSize(800,600);
         tela.setVisible(true);
         jDesktopPane1.setVisible(true);
         jDesktopPane1.add(tela);
@@ -211,7 +208,6 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         TelaCadastroTerreno tela = new TelaCadastroTerreno();
-        tela.setSize(800,600);
         tela.setVisible(true);
         jDesktopPane1.setVisible(true);
         jDesktopPane1.add(tela);
@@ -221,7 +217,6 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         TelaResultados tela = new TelaResultados();
-        tela.setSize(800,600);
         tela.setVisible(true);
         jDesktopPane1.setVisible(true);
         jDesktopPane1.add(tela);
@@ -230,7 +225,6 @@ public class Menu extends javax.swing.JFrame {
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
         // TODO add your handling code here:
         TelaResultados tela = new TelaResultados();
-        tela.setSize(800,600);
         tela.setVisible(true);
         jDesktopPane1.setVisible(true);
         jDesktopPane1.add(tela);
