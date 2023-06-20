@@ -8,12 +8,12 @@ package view;
  *
  * @author SAMSUNG
  */
-public class TelaVendas extends javax.swing.JInternalFrame {
+public class TelaRelatorios extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form TelaVendas
+     * Creates new form TelaRelatorios
      */
-    public TelaVendas() {
+    public TelaRelatorios() {
         initComponents();
     }
 
